@@ -12,6 +12,7 @@ phases:
       - mv terraform /usr/local/bin/
   pre_build:
     commands:
+      - cd envs/$TF_WS
       - terraform init -input=false -no-color
       - terraform workspace select $TF_WS -no-color
   build:
