@@ -6,6 +6,17 @@ variable "vpc_name" {
   default = "dev-ys"
 }
 
+variable "subnet_name_tag" {
+  type = "map"
+
+  default = {
+    public-a  = "public-subnet-a"
+    public-c  = "public-subnet-c"
+    private-a = "private-subnet-a"
+    private-c = "private-subnet-c"
+  }
+}
+
 variable "subnet_cidr" {
   type = "map"
 
