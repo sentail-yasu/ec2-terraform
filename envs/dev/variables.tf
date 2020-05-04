@@ -1,17 +1,9 @@
-variable "cidrs" {
+variable "vpc_cidr_block" {
   default = [
-    "0.0.0.0/0"
+    "10.0.0.0/16"
   ]
 }
 
-variable "vpc_id" {
-  default = "vpc-0a2255c398b001a89"
-}
-
-variable "app_name" {
-  default = "ys-dev-web"
-}
-
-variable "bastion_name" {
-  default = "ys-dev-bastion"
+variable "vpc_name" {
+  default = "dev-ys-vpc"
 }
