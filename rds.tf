@@ -20,10 +20,10 @@ resource "aws_db_instance" "posgre" {
     allocated_storage = 10
     engine = "postgres"
     engine_version = "9.6.2"
-    instance_class = "${var.rds_instance_class}"
-    name = "${var.database_name}"
-    username = "${var.db_username}"
-    password = "${var.db_password}"
+    instance_class = var.rds_instance_class
+    name = var.database_name
+    username = var.db_username
+    password = var.db_password
     db_subnet_group_name = "${aws_db_subnet_group.db-subnet.name}"
     vpc_security_group_ids = ["${aws_security_group.posgre_security_group.id}"]
     parameter_group_name = "${aws_db_parameter_group.db-pg.name}"

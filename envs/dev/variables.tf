@@ -30,8 +30,11 @@ variable "vpc_id" {
   default = "vpc-03d4b2b8196bc54b3"
 }
 
-variable "instance_class" {
+variable "rds_instance_class" {
   default = "db.t2.small"
+}
+variable "database_name" {
+  default = "knowledge"
 }
 
 variable "db_username" {
