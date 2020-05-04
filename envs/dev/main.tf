@@ -1,7 +1,7 @@
 ## VPC
 module "dev" {
   source             = "../../"
-  
+
   vpc_cidr           = var.vpc_cidr
   vpc_name           = var.vpc_name
   subnet_cidr        = var.subnet_cidr
@@ -11,4 +11,5 @@ module "dev" {
   rds_instance_class = var.rds_instance_class
   database_name      = var.database_name
   db_username        = var.db_username
+  db_password        = var.db_password
 }

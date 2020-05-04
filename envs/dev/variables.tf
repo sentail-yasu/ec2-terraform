@@ -40,3 +40,5 @@ variable "database_name" {
 variable "db_username" {
   default = "admin"
 }
+
+variable "db_password" {}
