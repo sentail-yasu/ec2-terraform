@@ -1,9 +1,3 @@
-resource "aws_db_subnet_group" "db-subnet" {
-    name = "db-subnet"
-    description = "test db subnet"
-    subnet_ids = ["${aws_subnet.private-a.id}", "${aws_subnet.private-c.id}"]
-}
-
 resource "aws_db_parameter_group" "db-pg" {
     name = "knowledge"
     family = "postgres9.6"

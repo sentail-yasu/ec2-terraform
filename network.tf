@@ -62,6 +62,13 @@ resource "aws_subnet" "private-c" {
   }
 }
 
+# db_subnet_group
+resource "aws_db_subnet_group" "db-subnet" {
+    name = "db-subnet"
+    description = "test db subnet"
+    subnet_ids = ["${aws_subnet.private-a.id}", "${aws_subnet.private-c.id}"]
+}
+
 # Internet Gateway
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc.id
