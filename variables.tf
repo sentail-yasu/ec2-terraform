@@ -1,2 +1,2 @@
-variable "vpc_cidr_block" {}
+variable "vpc_cidr"{}
 variable "vpc_name" {}
