@@ -6,3 +6,4 @@ module "dev" {
   subnet_cidr    = var.subnet_cidr
   subnet_name    = var.subnet_name
   igw_name_tag   = var.igw_name_tag
+}
