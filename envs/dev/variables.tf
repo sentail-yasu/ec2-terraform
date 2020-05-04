@@ -38,7 +38,7 @@ variable "database_name" {
 }
 
 variable "db_username" {
-  default = "ys-admin"
+  default = "postgres"
 }
 
 variable "db_password" {}
