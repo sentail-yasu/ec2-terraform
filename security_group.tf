@@ -22,5 +22,5 @@ resource "aws_security_group" "posgre_security_group" {
 }
 
 output "db_sg_id" {
-  value = aws_security_group.db_security_group.id
+  value = aws_security_group.posgre_security_group.id
 }
