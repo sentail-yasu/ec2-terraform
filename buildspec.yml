@@ -8,18 +8,16 @@ phases:
       - yum install unzip -y
       - wget https://releases.hashicorp.com/terraform/"$TF_VERSION"/terraform_"$TF_VERSION"_linux_amd64.zip
       - rm -rf terraform/
-      - unzip -o terraform_"$TF_VERSION"_linux_amd64.zip
-#      - unzip terraform_0.12.19_linux_amd64.zip
+      - unzip terraform_"$TF_VERSION"_linux_amd64.zip
       - mv terraform /usr/local/bin/
   pre_build:
     commands:
       - terraform init -input=false -no-color
-      - terraform plan -input=false -no-color
-
+      - terraform workspace select $TF_WS -no-color
   build:
     commands:
-      - terraform apply -input=false -auto-approve -no-color
+      - terraform destroy $TF_OPT
 
   post_build:
     commands:
-      - echo terraform apply completed on `date`
+      - echo terraform $TF_CMD completed on `date`
