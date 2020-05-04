@@ -29,3 +29,11 @@ variable "name" {
 variable "vpc_id" {
   default = "vpc-03d4b2b8196bc54b3"
 }
+
+variable "instance_class" {
+  default = "db.t2.small"
+}
+
+variable "db_username" {
+  default = "admin"
+}

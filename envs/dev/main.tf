@@ -7,4 +7,6 @@ module "dev" {
   igw_name_tag   = var.igw_name_tag
   name           = var.name
   vpc_id         = var.vpc_id
+  instance_class = var.instance_class
+  db_username    = var.db_username
 }
