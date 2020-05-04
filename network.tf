@@ -25,10 +25,10 @@ resource "aws_subnet" "public-a" {
   cidr_block        = var.subnet_cidr["public-a"]
   map_public_ip_on_launch = true
   availability_zone = "ap-northeast-1a"
-  tags = {
-    Name = "${var.subnet_name["public-a"]}"
-  }
-}
+
+    tags = {
+      Name = "${var.subnet_name["public-a"]}"
+    }
 }
 
 resource "aws_subnet" "public-c" {
