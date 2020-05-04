@@ -27,7 +27,7 @@ resource "aws_subnet" "public-a" {
   availability_zone = "ap-northeast-1a"
 
   tags = {
-    Name = "public-subnet-a"
+    Name = "public-subnet-1a"
   }
 }
 
@@ -36,18 +36,30 @@ resource "aws_subnet" "public-c" {
   cidr_block        = var.subnet_cidr["public-c"]
   map_public_ip_on_launch = true
   availability_zone = "ap-northeast-1c"
+
+  tags = {
+    Name = "public-subnet-1c"
+  }
 }
 
 resource "aws_subnet" "private-a" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = var.subnet_cidr["private-a"]
   availability_zone = "ap-northeast-1a"
+
+  tags = {
+    Name = "private-subunet-1a"
+  }
 }
 
 resource "aws_subnet" "private-c" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = var.subnet_cidr["private-c"]
   availability_zone = "ap-northeast-1c"
+
+  tags = {
+    Name = "private-subunet-1c"
+  }
 }
 
 # Internet Gateway
