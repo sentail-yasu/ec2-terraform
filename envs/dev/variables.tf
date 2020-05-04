@@ -20,3 +20,12 @@ variable "subnet_cidr" {
 variable "igw_name_tag" {
   default = "ys-igw"
 }
+
+
+variable "name" {
+  default = "dev-ys"
+}
+
+variable "vpc_id" {
+  default = "vpc-03d4b2b8196bc54b3"
+}
