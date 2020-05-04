@@ -4,7 +4,7 @@ resource "aws_vpc" "this" {
   enable_dns_support   = true
 
   tags = {
-    Name = "${var.name}-vpc"
+    Name = "${var.vpc_name}-vpc"
   }
 }
 
@@ -25,6 +25,10 @@ resource "aws_subnet" "public-a" {
   cidr_block        = var.subnet_cidr["public-a"]
   map_public_ip_on_launch = true
   availability_zone = "ap-northeast-1a"
+
+  tags = {
+    Name = var.subnet_name}["public-a"]
+  }
 }
 
 resource "aws_subnet" "public-c" {
@@ -32,23 +36,39 @@ resource "aws_subnet" "public-c" {
   cidr_block        = var.subnet_cidr["public-c"]
   map_public_ip_on_launch = true
   availability_zone = "ap-northeast-1c"
+
+  tags = {
+    Name = var.subnet_name}["public-c"]
+  }
 }
 
 resource "aws_subnet" "private-a" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = var.subnet_cidr["private-a"]
   availability_zone = "ap-northeast-1a"
+
+  tags = {
+    Name = var.subnet_name}["private-a"]
+  }
 }
 
 resource "aws_subnet" "private-c" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = var.subnet_cidr["private-c"]
   availability_zone = "ap-northeast-1c"
+
+  tags = {
+    Name = var.subnet_name}["private-c"]
+  }
 }
 
 # Internet Gateway
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc.id
+
+  tags = {
+    Name = var.igw_name_tag
+  }
 }
 
 # public Route Table

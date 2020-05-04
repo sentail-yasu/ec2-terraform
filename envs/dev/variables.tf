@@ -31,7 +31,3 @@ variable "subnet_name" {
 variable "igw_name_tag" {
   default = "ys-igw"
 }
-
-variable "rt_name_tag" {
-  default = "ys-rt"
-}
