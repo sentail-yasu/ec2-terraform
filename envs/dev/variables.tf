@@ -38,7 +38,7 @@ variable "database_name" {
 }
 
 variable "db_username" {
-  default = "admin"
+  default = "ys-admin"
 }
 
 variable "db_password" {}
