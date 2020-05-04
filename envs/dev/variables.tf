@@ -16,17 +16,6 @@ variable "subnet_cidr" {
     private-c = "10.1.200.0/24"
   }
 }
-## Subnet Name Tag
-variable "subnet_name" {
-  type = "map"
-
-  default = {
-    public-a  = "public-subnet-a"
-    public-c  = "public-subnet-c"
-    private-a = "private-subnet-a"
-    private-c = "private-subnet-c"
-  }
-}
 
 variable "igw_name_tag" {
   default = "ys-igw"
