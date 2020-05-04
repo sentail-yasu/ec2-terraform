@@ -16,7 +16,7 @@ phases:
       - terraform workspace select $TF_WS -no-color
   build:
     commands:
-      - terraform destroy $TF_OPT
+      - terraform $TF_CMD $TF_OPT
 
   post_build:
     commands:
