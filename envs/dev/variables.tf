@@ -46,3 +46,40 @@ variable "db_password" {}
 variable "region" {
   default = "ap-northeast-1"
 }
+
+variable "ami_id" {
+  default = "ami-0f310fced6141e627"
+}
+
+variable "instance_count" {
+  default = 2
+}
+
+variable "public_subnets" {
+  default = {
+    "0" = "subnet-0f93d28bfe4a22aa2"
+    "1" = "subnet-0bf0ffd854dcfcf0f"
+  }
+}
+variable "private_subnets" {
+  default = {
+    "0" = "subnet-039c61868a636f461"
+    "1" = "subnet-0f99317cab46ac3bd"
+  }
+}
+
+variable "instance_type" {
+  default = "t3.micro"
+}
+
+variable "key_pair" {
+  default = "s3_test"
+}
+
+variable "app_name" {
+  default = "ys-dev-web"
+}
+
+variable "bastion_name" {
+  default = "ys-dev-bastion"
+}

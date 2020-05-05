@@ -12,6 +12,12 @@ module "dev" {
   database_name      = var.database_name
   db_username        = var.db_username
   db_password        = var.db_password
+
+  ami_id             = var.ami_id
+  public_subnets     = var.public_subnets
+  instance_type      = var.instance_type
+  key_pair           = var.key_pair
+  bastion_name       = var.bastion_name
   
 }
 
