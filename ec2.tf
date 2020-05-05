@@ -10,3 +10,11 @@ resource "aws_instance" "bastion_ec2" {
     Name = "${var.bastion_name}_${count.index + 1}"
   }
 }
+
+
+output "instance_ids_bastion_public" {
+  value = {
+    for instance in aws_instance.bastion_ec2 :
+    instance.id => instance.public_ip
+  }
+}
