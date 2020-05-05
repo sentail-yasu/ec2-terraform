@@ -13,11 +13,16 @@ module "dev" {
   db_username        = var.db_username
   db_password        = var.db_password
 
+  region             = var.region
   ami_id             = var.ami_id
+  instance_count     = var.instance_count
   public_subnets     = var.public_subnets
+  private_subnets    = var.private_subnets
   instance_type      = var.instance_type
   key_pair           = var.key_pair
+  app_name           = var.app_name
   bastion_name       = var.bastion_name
+
 
 }
 
