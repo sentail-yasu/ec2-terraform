@@ -6,9 +6,9 @@ resource "aws_iam_role" "iam_role" {
 data "template_file" "execution_assume_role_policy" {
   template = "${file("${path.module}/execution_assume_role_policy.json")}"
 
-#  vars {
-#    region = "${var.region}"
-#  }
+  vars {
+    region = "ap-northeast-1"
+  }
 }
 
 resource "aws_iam_role" "execution" {
