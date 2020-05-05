@@ -12,7 +12,7 @@ module "dev" {
   database_name      = var.database_name
   db_username        = var.db_username
   db_password        = var.db_password
-  
+
 }
 
 module "iam" {
