@@ -42,3 +42,7 @@ variable "db_username" {
 }
 
 variable "db_password" {}
+
+variable "region" {
+  default = "ap-northeast-1"
+}

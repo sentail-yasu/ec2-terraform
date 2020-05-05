@@ -8,3 +8,4 @@ variable "rds_instance_class" {}
 variable "database_name" {}
 variable "db_username" {}
 variable "db_password" {}
+variable "region" {}
