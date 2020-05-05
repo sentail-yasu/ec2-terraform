@@ -15,8 +15,8 @@ module "dev" {
 
 }
 
-module "iam" {
-  source = "../../modules/iam/"
-  name               = var.name
-  region             = var.region
-}
+#module "iam" {
+#  source = "../../modules/iam/"
+#  name               = var.name
+#  region             = var.region
+#}
