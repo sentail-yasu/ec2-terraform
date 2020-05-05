@@ -9,7 +9,7 @@ data "template_file" "execution_assume_role_policy" {
 #  vars {
 #    region = "ap-northeast-1"
 #  }
-#}
+}
 
 resource "aws_iam_role" "execution" {
   assume_role_policy = "${data.template_file.execution_assume_role_policy.rendered}"
