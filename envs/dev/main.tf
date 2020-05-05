@@ -18,11 +18,11 @@ module "dev" {
   instance_type      = var.instance_type
   key_pair           = var.key_pair
   bastion_name       = var.bastion_name
-  
+
 }
 
-module "iam" {
-  source = "../../modules/iam/"
-
-  region             = var.region
-}
+#module "iam" {
+#  source = "../../modules/iam/"
+#  name               = var.name
+#  region             = var.region
+#}

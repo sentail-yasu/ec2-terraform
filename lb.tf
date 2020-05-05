@@ -30,7 +30,7 @@ resource "aws_alb_target_group" "alb" {
     protocol            = "HTTP"
     timeout             = 20
     unhealthy_threshold = 4
-    matcher             = 200
+    matcher             = 302
   }
 }
 

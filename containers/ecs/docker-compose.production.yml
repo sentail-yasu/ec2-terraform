@@ -1,0 +1,14 @@
+version: '2'
+services:
+  rails:
+    image: ${CONTAINER_REGISTRY}/${APP_NAME}-rails:${ENV}_${SHA1}
+    env_file: ${ENV}.env
+    ports:
+      - "8080:8080"
+    mem_limit: ${RAILS_MEMORY}MB
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: ${APP_NAME}
+        awslogs-region: ap-northeast-1
+        awslogs-stream-prefix: ${ENV}
