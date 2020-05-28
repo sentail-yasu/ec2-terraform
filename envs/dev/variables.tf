@@ -3,7 +3,7 @@ variable "vpc_cidr"{
 }
 
 variable "vpc_name" {
-  default = "dev-ys"
+  default = "dev-y"
 }
 
 variable "subnet_cidr" {
